@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
 RUN apt-get -qq update
 RUN apt-get -qq upgrade
-RUN apt-get -qq install -y --no-install-recommends curl git gnupg2 unzip wget pv jq php
+RUN apt-get -qq install -y --no-install-recommends curl git gnupg2 unzip wget pv jq php httrack
 
 # add mkvtoolnix
 RUN wget -q -O - https://mkvtoolnix.download/gpg-pub-moritzbunkus.txt | apt-key add - && \
