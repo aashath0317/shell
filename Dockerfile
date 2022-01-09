@@ -5,8 +5,7 @@ WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
 RUN apt-get -qq update
 RUN apt-get -qq upgrade
-RUN apt-get -qq install -y --no-install-recommends curl git gnupg2 unzip wget pv jq php httrack
-
+RUN apt-get -qq install -y --no-install-recommends curl git gnupg2 unzip wget pv tesseract-ocr libtesseract-dev
 # add mkvtoolnix
 RUN wget -q -O - https://mkvtoolnix.download/gpg-pub-moritzbunkus.txt | apt-key add - && \
     wget -qO - https://ftp-master.debian.org/keys/archive-key-10.asc | apt-key add -
